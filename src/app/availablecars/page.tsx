@@ -98,15 +98,7 @@ export default function AvailableCars() {
       </div>
 
       {/* Car Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
-        {filteredCars.length > 0 ? (
-          filteredCars.map((car) => (
-            <CarCard key={car.id} car={car} onBook={() => setSelectedCar(car)} />
-          ))
-        ) : (
-          <p className="text-gray-500 col-span-full">No cars match your search.</p>
-        )}
-      </div>
+   
 
       {/* Booking Modal */}
       {selectedCar && <BookingModal car={selectedCar} onClose={() => setSelectedCar(null)} />}
